@@ -1,7 +1,134 @@
 {
-    "users":[],
-    "products":[],
-    "messages":[],
-    "orders":[],
-    "categories":[]
+  "users": [
+    {
+      "id": "SEErqwH5ifxNr5uQYu9hE",
+      "username": "reiyna1o",
+      "password": "Rena123",
+      "createdAt": "2024-05-09T07:53:38.505Z",
+      "email": "quliyeva@gmail.com",
+      "profileImg": "https://cdn.jwplayer.com/v2/media/mcn8jqxc/poster.jpg?width=720",
+      "balance": "1000",
+      "role": "client",
+      "basketItems": [
+        {
+          "productId": "wWz0lBKFaynZU1qlJD39D"
+        },
+        {
+          "productId": "ot3xYCFFIHU12JZ4Z9gTC"
+        },
+        {
+          "productId": "IiKgV7YmYHtpxPfqHZy8i"
+        }
+      ]
+    },
+    {
+      "id": "rRJKaGPED80YaB7MCXBan",
+      "username": "seiyna1o",
+      "password": "Rena123",
+      "createdAt": "2024-05-09T07:54:42.009Z",
+      "email": "quliyeva@gmail.com",
+      "profileImg": "https://cdn.jwplayer.com/v2/media/mcn8jqxc/poster.jpg?width=720",
+      "balance": "1000",
+      "role": "admin",
+      "basketItems": []
+    },
+    {
+      "id": "Ju_3RIxg6cN9ueXOrRoM4",
+      "username": "reiyna1o",
+      "password": "Rena123",
+      "createdAt": "2024-05-09T07:54:57.725Z",
+      "email": "quliyeva@gmail.com",
+      "profileImg": "https://cdn.jwplayer.com/v2/media/mcn8jqxc/poster.jpg?width=720",
+      "balance": "1000",
+      "role": "client",
+      "basketItems": []
+    },
+    {
+      "id": "2I-IforW0OtFqujyl823m",
+      "username": "reiyna1o",
+      "password": "Rena123",
+      "createdAt": "2024-05-09T07:55:08.452Z",
+      "email": "quliyeva@gmail.com",
+      "profileImg": "https://cdn.jwplayer.com/v2/media/mcn8jqxc/poster.jpg?width=720",
+      "balance": "1000",
+      "role": "client",
+      "basketItems": []
+    },
+    {
+      "id": "PwltmKRD5-nI7IZhdOcMK",
+      "username": "dd",
+      "password": "d",
+      "createdAt": "2024-05-09T08:17:39.806Z",
+      "email": "",
+      "profileImg": "",
+      "balance": "",
+      "role": "client",
+      "basketItems": []
+    }
+  ],
+  "products": [
+    {
+      "id": "IiKgV7YmYHtpxPfqHZy8i",
+      "name": "t-shirt",
+      "salePrice": "50",
+      "costPrice": "60",
+      "createdAt": "2024-05-09T17:25:04.489Z",
+      "imgSrc": "https://cdn.dsmcdn.com/ty329/product/media/images/20220211/21/48765801/385364373/1/1_org_zoom.jpg",
+      "discountPercentage": "1",
+      "description": "This product will be sent by ALİKAA . More than 100 stocks were offered to be sold at the campaign price. The seller determines the sales price of the product you have examined. A product can be sold by more than one seller. The sellers of the products offered for sale by more than one seller are listed according to the price they set for the product, seller scores,",
+      "categoryId": "clothes",
+      "stockCount": "160"
+    },
+    {
+      "id": "6w3u3P0ZV_ptRllYnyoCt",
+      "name": "galaxy t-shirt",
+      "salePrice": "40",
+      "costPrice": "70",
+      "createdAt": "2024-05-09T17:26:34.355Z",
+      "imgSrc": "https://cdn.dsmcdn.com/mnresize/500/-/ty853/product/media/images/20230429/22/334858582/922419295/1/1_org.jpg",
+      "discountPercentage": "10",
+      "description": "This product will be sent by LILAO . More than 100 stocks were offered to be sold at the campaign price. The seller determines the sales price of the product you have examined. A product can be sold by more than one seller. The sellers of the products offered for sale by more than one seller are listed according to the price they set for the product, seller scores, delivery status, promotions on the products, whether the shipping is free or not, whether the products can be delivered with fast delivery, and the stock and category information of the products. A maximum of 10 units of this product can be ordered. Trendyol reserves the right to cancel orders over 10 items. This specified limit is not valid for corporate orders, and different limits can be determined for corporate orders. Free returns within 15 days. Click for detailed information . Our T-Shirt Models are produced from 24/1 combed cotton fabric. It is absolutely of high quality, it will never fade, shrink or break, you can use it with peace of mind for many years. None of our products are see-through, especially non-see-through fabric is used. If you do not prefer it to be too loose, it is recommended to take your own size. If you wish, you can also ask us questions about size. Fabric: 100% Cotton Color may differ by 1-2 tones due to the light used during product shooting.",
+      "categoryId": "men",
+      "stockCount": "180"
+    },
+    {
+      "id": "1nN3v-SfzrJXThRG_FaG4",
+      "name": "baggy jeans",
+      "salePrice": "70",
+      "costPrice": "90",
+      "createdAt": "2024-05-09T17:27:46.738Z",
+      "imgSrc": "https://cdn.dsmcdn.com/mnresize/500/-/ty1017/product/media/images/prod/SPM/PIM/20231019/21/3ecca687-54a3-337c-b740-64b94f352592/1_org.jpg",
+      "discountPercentage": "10",
+      "description": "This item will be sent by Maisie . There are less than 5 items in stock to be sold at the campaign price. The seller determines the sales price of the product you have examined. A product can be sold by more than one seller. The sellers of the products offered for sale by more than one seller are listed according to the price they set for the product, seller scores, delivery status, promotions on the products, whether the shipping is free or not, whether the products can be delivered with fast delivery, and the stock and category information of the products. A maximum of 10 units of this product can be ordered. Trendyol reserves the right to cancel orders over 10 items. This specified limit is not valid for corporate orders, and different limits can be determined for corporate orders. Free returns within 15 days. Click for detailed information . Black Washed Baggy Jean Fabric Type: Denim Color: Antique Model: Height: 1.65 Weight: 50 Size Above: 28 26 - 103 cm 27 - 104 cm 28 - 105 cm 29 - 107 cm 30 - 109 cm 31 - 110 cm ( may differ by 1-2 cm) Max. It is recommended to wash at 30 degrees.",
+      "categoryId": "jeans",
+      "stockCount": "500"
+    },
+    {
+      "id": "9EPJHlulnlouV4D___iub",
+      "name": "Kargo jeans",
+      "salePrice": "55",
+      "costPrice": "70",
+      "createdAt": "2024-05-09T17:29:35.643Z",
+      "imgSrc": "https://cdn.dsmcdn.com/ty570/product/media/images/20221019/15/197364352/600745020/2/2_org_zoom.jpg",
+      "discountPercentage": "8",
+      "description": "This product will be sent by DENIKK . More than 100 stocks were offered to be sold at the campaign price. The seller determines the sales price of the product you have examined. A product can be sold by more than one seller. The sellers of the products offered for sale by more than one seller are listed according to the price they set for the product, seller scores, delivery status, promotions on the products, whether the shipping is free or not, whether the products can be delivered with fast delivery, and the stock and category information of the products. A maximum of 10 units of this product can be ordered. Trendyol reserves the right to cancel orders over 10 items. This specified limit is not valid for corporate orders, and different limits can be determined for corporate orders. Free returns within 15 days. Click for detailed information . Reverse Stitch Black Cargo Pants Model Measurements: Height: 1.63, Weight: 47 Size XS on the model.",
+      "categoryId": "jeans",
+      "stockCount": "60"
+    },
+    {
+      "id": "TnDPyZ7VfW-aKSp57VecD",
+      "name": "blue t-shirt",
+      "salePrice": "20",
+      "costPrice": "30",
+      "createdAt": "2024-05-09T17:31:22.489Z",
+      "imgSrc": "https://static.ticimax.cloud/13651/uploads/urunresimleri/buyuk/mavi-desenli-tek-omuz-aski-detay-cropc-93f3bc.jpg",
+      "discountPercentage": "8",
+      "description": "This product will be sent by DENIKK . More than 100 stocks were offered to be sold at the campaign price. The seller determines the sales price of the product you have examined. A product can be sold by more than one seller. The sellers of the products offered for sale by more than one seller are listed according to the price they set for the product, seller scores, delivery status, promotions on the products, whether the shipping is free or not, whether the products can be delivered with fast delivery, and the stock and category information of the products. A maximum of 10 units of this product can be ordered. Trendyol reserves the right to cancel orders over 10 items. This specified limit is not valid for corporate orders, and different limits can be determined for corporate orders. Free returns within 15 days. Click for detailed information . Reverse Stitch Black Cargo Pants Model Measurements: Height: 1.63, Weight: 47 Size XS on the model.",
+      "categoryId": "t-shirt",
+      "stockCount": "120"
+    }
+  ],
+  "messages": [],
+  "orders": [],
+  "categories": []
 }

@@ -2,6 +2,9 @@ import { Box, Button, FormGroup, TextField } from '@mui/material';
 import { useFormik } from 'formik';
 import React from 'react';
 import { userValidations } from '../../../validations/userValidations';
+import User from '../../../classes/userClass';
+import { post } from '../../../services/API/requests';
+import { enpoints } from '../../../services/constants';
 
 const Register = () => {
 
@@ -15,17 +18,21 @@ const Register = () => {
       balance: '',
     },
     onSubmit: values => {
-      console.log(values);
+
+      console.log("values", values);
+      const newuser = new User(values.username, values.password, values.email, values.profileImg, values.balance)
+      console.log("newuser",newuser);
+      post(enpoints.users,newuser)
     },
     validationSchema: userValidations
-    
-    
+
+
   });
 
   return (
     <div>
       <Box
-      
+
         component="form"
         onSubmit={formik.handleSubmit}
         sx={{
@@ -51,7 +58,7 @@ const Register = () => {
           {formik.errors.profileImg && <span style={{ color: 'red' }}>{formik.errors.profileImg}</span>}
 
           <TextField value={formik.values.balance} onChange={formik.handleChange} name='balance' id="outlined-basic" label="balance" variant="outlined" />
-          {formik.errors.balance && <span style={{color:'red'}}>{formik.errors.balance}</span>}
+          {formik.errors.balance && <span style={{ color: 'red' }}>{formik.errors.balance}</span>}
 
           <Button type='submit'>Register</Button>
         </FormGroup>

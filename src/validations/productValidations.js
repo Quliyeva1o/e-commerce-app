@@ -9,5 +9,7 @@ export const productValidation = Yup.object().shape({
     imgSrc: Yup.string().url().required(),
     discountPercentage: Yup.number().min(0).max(100).required(),
     description: Yup.string().min(10).required(),
+    categoryId: Yup.string().required(),
     stockCount: Yup.number().min(1).required(),
 });
+ 
