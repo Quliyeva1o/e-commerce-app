@@ -2,11 +2,12 @@ import { Box, Button, FormGroup, TextField } from '@mui/material'
 import { useFormik } from 'formik'
 import React, { useContext, useState } from 'react'
 import { LocalUserContext, UsersContext } from '../../../context/usersContext'
+import { useNavigate } from 'react-router-dom'
 
 const ClientLogin = () => {
   const { users } = useContext(UsersContext);
   const { setLocalUser } = useContext(LocalUserContext);
-
+const navigate =useNavigate()
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -20,6 +21,7 @@ const ClientLogin = () => {
         console.log(loggedinuser);
         localStorage.setItem("loggedinUser", JSON.stringify({ "id": loggedinuser.id, "role": loggedinuser.role }))
         setLocalUser(loggedinuser)
+        navigate("/products")
       }
       else{
         alert("username or pass is incorrect")

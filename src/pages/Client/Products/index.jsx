@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { getOne, patch } from '../../../services/API/requests';
 import { enpoints } from '../../../services/constants';
 import { Select } from 'antd';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ClientProducts = () => {
   const { products, setProducts } = useContext(ProductContext)
@@ -25,12 +26,17 @@ const ClientProducts = () => {
   }, [products])
 
   const handlesubmit = (id) => {
-    console.log(loggedinUser);
-    const basketitem = { ...loggedinUser, "basketItems": [...loggedinUser.basketItems, { "productId": id }] }
-    localUser ? patch(enpoints.users, localUser.id, basketitem)
-      : navigate("/login");
+    if (localUser) {
+      const basketitem = { ...loggedinUser, "basketItems": [...loggedinUser.basketItems, { "productId": id }] }
+      patch(enpoints.users, localUser.id, basketitem)
+     alert("product added your basket")
+          
+    }
 
-
+    else {
+      navigate("/login");
+    }
+    
   }
   const handleSearch = (e) => {
     const filteredProductss = products.filter((x) => x.name.includes(e.target.value))
@@ -117,6 +123,7 @@ const ClientProducts = () => {
 
         </CardContent>
       </Container>
+      <ToastContainer />
     </>
   )
 }

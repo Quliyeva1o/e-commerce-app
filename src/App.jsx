@@ -30,7 +30,7 @@ function App() {
     if (loggedInAdmin) {
       setLocalAdmin(JSON.parse(loggedInAdmin))
     }
-  }, [])
+  }, [users])
   return (
     <AdminContext.Provider value={{ localAdmin, setLocalAdmin }}>
       <LocalUserContext.Provider value={{ localUser, setLocalUser }}>

@@ -18,6 +18,24 @@
         },
         {
           "productId": "IiKgV7YmYHtpxPfqHZy8i"
+        },
+        {
+          "productId": "6w3u3P0ZV_ptRllYnyoCt"
+        },
+        {
+          "productId": "IiKgV7YmYHtpxPfqHZy8i"
+        },
+        {
+          "productId": "1nN3v-SfzrJXThRG_FaG4"
+        },
+        {
+          "productId": "IiKgV7YmYHtpxPfqHZy8i"
+        },
+        {
+          "productId": "6w3u3P0ZV_ptRllYnyoCt"
+        },
+        {
+          "productId": "6w3u3P0ZV_ptRllYnyoCt"
         }
       ]
     },
@@ -64,6 +82,54 @@
       "balance": "",
       "role": "client",
       "basketItems": []
+    },
+    {
+      "id": "XBuPVg4PzIV0iLlLUs8az",
+      "username": "elnurxo",
+      "password": "Elnur123",
+      "createdAt": "2024-05-10T04:22:12.781Z",
+      "email": "elnurxo@gmail.com",
+      "profileImg": "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200",
+      "balance": "1000",
+      "role": "client",
+      "basketItems": []
+    },
+    {
+      "id": "Bnl0vYd9Mze7padPANrp-",
+      "username": "elnurxo",
+      "password": "Elnur123",
+      "createdAt": "2024-05-10T04:22:14.350Z",
+      "email": "elnurxo@gmail.com",
+      "profileImg": "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200",
+      "balance": "1000",
+      "role": "client",
+      "basketItems": []
+    },
+    {
+      "id": "Aex4LKZkjf4M--L8xXzsk",
+      "username": "elnurxo",
+      "password": "Elnur123",
+      "createdAt": "2024-05-10T04:22:15.127Z",
+      "email": "elnurxo@gmail.com",
+      "profileImg": "https://static.scientificamerican.com/sciam/cache/file/2AE14CDD-1265-470C-9B15F49024186C10_source.jpg?w=1200",
+      "balance": "1000",
+      "role": "client",
+      "basketItems": []
+    },
+    {
+      "id": "JqRUGRp8gh3B2fVZqhRfE",
+      "username": "gulsezalova",
+      "password": "Gulshen123",
+      "createdAt": "2024-05-10T04:24:15.349Z",
+      "email": "gulsen@gmail.com",
+      "profileImg": "https://img.freepik.com/premium-photo/cute-sweet-baby-pink-cat-with-sweet-smile-small-peach-blossom-around-smiling_445384-115.jpg",
+      "balance": "1000",
+      "role": "client",
+      "basketItems": [
+        {
+          "productId": "6w3u3P0ZV_ptRllYnyoCt"
+        }
+      ]
     }
   ],
   "products": [

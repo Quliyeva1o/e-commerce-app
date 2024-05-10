@@ -5,9 +5,10 @@ import { userValidations } from '../../../validations/userValidations';
 import User from '../../../classes/userClass';
 import { post } from '../../../services/API/requests';
 import { enpoints } from '../../../services/constants';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-
+const navigate=useNavigate()
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -19,10 +20,9 @@ const Register = () => {
     },
     onSubmit: values => {
 
-      console.log("values", values);
       const newuser = new User(values.username, values.password, values.email, values.profileImg, values.balance)
-      console.log("newuser",newuser);
       post(enpoints.users,newuser)
+      navigate("/login")
     },
     validationSchema: userValidations
 
