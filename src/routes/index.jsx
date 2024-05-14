@@ -1,5 +1,4 @@
 import AdminLogin from "../pages/Admin/Login";
-import AdminMessages from "../pages/Admin/Messages";
 import Basket from "../pages/Client/Basket";
 import ClientRoot from "../pages/Client/ClientRoot";
 import ContactUs from "../pages/Client/ContactUs/inex";
@@ -17,6 +16,7 @@ import Orders from "../pages/Admin/Orders";
 import Categories from "../pages/Admin/Categories";
 import AddCategory from "../pages/Admin/AddCategory";
 import Dashboard from "../pages/Admin/Dashboard";
+import AdminMessages from "../pages/Admin/Messages";
 
 export const ROUTES=[
     {

@@ -5,4 +5,4 @@ export default class Category{
         this.id=nanoid()
         this.name=name
     }
-}
+} 

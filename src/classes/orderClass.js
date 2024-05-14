@@ -5,4 +5,4 @@ export default class Order {
         this.createdAt=new Date()
         this.items=[]
     }
-}
+}  

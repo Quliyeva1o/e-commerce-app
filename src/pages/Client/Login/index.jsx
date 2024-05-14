@@ -3,6 +3,8 @@ import { useFormik } from 'formik'
 import React, { useContext, useState } from 'react'
 import { LocalUserContext, UsersContext } from '../../../context/usersContext'
 import { useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const ClientLogin = () => {
   const { users } = useContext(UsersContext);
@@ -20,15 +22,18 @@ const navigate =useNavigate()
       if(loggedinuser.role=="client"){
         console.log(loggedinuser);
         localStorage.setItem("loggedinUser", JSON.stringify({ "id": loggedinuser.id, "role": loggedinuser.role }))
+        localStorage.setItem("usersBasket", JSON.stringify(loggedinuser.basketItems))
+
         setLocalUser(loggedinuser)
         navigate("/products")
+        
       }
       else{
-        alert("username or pass is incorrect")
+        toast.error("username or pass is incorrect")
       }
       }
       else {
-       alert("username or pas is incorrect")
+       toast.error("username or pass is incorrect")
       }
     },
 
@@ -49,6 +54,7 @@ const navigate =useNavigate()
           <Button variant='contained' type='submit'>Log in</Button>
         </FormGroup>
       </Box>
+      <ToastContainer/>
     </div>
   )
 }

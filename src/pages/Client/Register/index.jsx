@@ -1,14 +1,16 @@
 import { Box, Button, FormGroup, TextField } from '@mui/material';
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useContext } from 'react';
 import { userValidations } from '../../../validations/userValidations';
 import User from '../../../classes/userClass';
 import { post } from '../../../services/API/requests';
 import { enpoints } from '../../../services/constants';
 import { useNavigate } from 'react-router-dom';
+import { UsersContext } from '../../../context/usersContext';
 
 const Register = () => {
-const navigate=useNavigate()
+  const { users, setUsers } = useContext(UsersContext)
+  const navigate = useNavigate()
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -21,8 +23,11 @@ const navigate=useNavigate()
     onSubmit: values => {
 
       const newuser = new User(values.username, values.password, values.email, values.profileImg, values.balance)
-      post(enpoints.users,newuser)
+      post(enpoints.users, newuser)
       navigate("/login")
+      setUsers((currentUsers) => {
+        return [...currentUsers, newuser]
+      })
     },
     validationSchema: userValidations
 

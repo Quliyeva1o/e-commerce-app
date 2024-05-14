@@ -16,7 +16,7 @@ const AdminLogin = () => {
     onSubmit: values => {
       const loggedinAdmin = users.find((x) => x.username == values.username && x.password == values.password)
       if (loggedinAdmin) {
-        if (loggedinAdmin.role == "admin") {
+        if (loggedinAdmin.role == "admin" || loggedinAdmin.role=="superadmin") {
           localStorage.setItem("loggedinAdmin", JSON.stringify({ "id": loggedinAdmin.id, "role": loggedinAdmin.role }))
           setLocalAdmin(loggedinAdmin)
         }

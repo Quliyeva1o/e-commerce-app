@@ -8,5 +8,6 @@ export default class Message{
         this.title=title
         this.message=message
         this.createdAt=new Date()
+        this.isRead=false
     }
 }

@@ -8,12 +8,18 @@ import { getOne, patch } from '../../../services/API/requests';
 import { enpoints } from '../../../services/constants';
 import { Select } from 'antd';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ClientProducts = () => {
   const { products, setProducts } = useContext(ProductContext)
   const { localUser, setLocalUser } = useContext(LocalUserContext)
   const [loggedinUser, setLoggedinUser] = useState([])
   const [filteredProducts, setFilteredProducts] = useState(products)
+
+
+
+
+
   const navigate = useNavigate()
   useEffect(() => {
     localUser && getOne(enpoints.users, localUser.id).then((res) => {
@@ -27,17 +33,31 @@ const ClientProducts = () => {
 
   const handlesubmit = (id) => {
     if (localUser) {
-      const basketitem = { ...loggedinUser, "basketItems": [...loggedinUser.basketItems, { "productId": id }] }
-      patch(enpoints.users, localUser.id, basketitem)
-     alert("product added your basket")
-          
-    }
-
-    else {
+      const loggedinusersBasket = loggedinUser.basketItems.find((x) => (x.productId == id))
+  
+      if (loggedinusersBasket) {
+        const ncount = loggedinusersBasket.count + 1
+        const updatedBasketItems = loggedinUser.basketItems.map(item => item.productId === id ? { ...item, count: ncount } : item)
+        const updatedUser = { ...loggedinUser, basketItems: updatedBasketItems }
+  
+        patch(enpoints.users, localUser.id, updatedUser)
+        setLoggedinUser(updatedUser)
+        localStorage.setItem("usersBasket", JSON.stringify(updatedBasketItems))
+        toast.success("Product added to your basket")
+      } else {
+        const updatedBasketItems = [...loggedinUser.basketItems, { "productId": id, "count": 1 }]
+        const updatedUser = { ...loggedinUser, basketItems: updatedBasketItems }
+  
+        patch(enpoints.users, localUser.id, updatedUser)
+        setLoggedinUser(updatedUser)
+        localStorage.setItem("usersBasket", JSON.stringify(updatedBasketItems))
+        toast.success("Product added to your basket")
+      }
+    } else {
       navigate("/login");
     }
-    
   }
+  
   const handleSearch = (e) => {
     const filteredProductss = products.filter((x) => x.name.includes(e.target.value))
     setFilteredProducts(filteredProductss)
